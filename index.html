@@ -1,44 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Piece New Tab</title>
+    <title>One Piece Tab Baru</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/themes.css">
 </head>
-<body data-theme="default">
-    <div class="theme-selector">
-        <button class="theme-btn" id="themeToggle">🎨</button>
-        <div class="theme-options" id="themeOptions"></div>
+<body data-tema="default">
+    <div class="pemilih-tema">
+        <button class="tombol-tema" id="tombolTema">🎨</button>
+        <div class="opsi-tema" id="opsiTema">
+            <div class="opsi" data-tema="default">🌊 Grand Line</div>
+            <div class="opsi" data-tema="topi-jerami">👒 Kru Topi Jerami</div>
+            <div class="opsi" data-tema="marinir">⚓ Markas Marinir</div>
+            <div class="opsi" data-tema="wano">🗻 Negeri Wano</div>
+        </div>
     </div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/One_Piece_Logo.svg/1200px-One_Piece_Logo.svg.png" alt="One Piece Logo" class="logo">
+    <img src="img/logo.jpg" alt="Logo One Piece" class="logo">
     <h1>Menuju Laugh Tale!</h1>
     
-    <div class="time-container" id="time"></div>
+    <div class="waktu" id="waktu"></div>
     
-    <div class="search-container">
-        <input type="text" id="search" placeholder="Cari harta karun..." autofocus>
-        <div class="search-buttons">
-            <button class="search-btn" id="googleSearch">Google Search</button>
-            <button class="search-btn" id="youtubeSearch">YouTube</button>
-            <button class="search-btn" id="wikiSearch">One Piece Wiki</button>
+    <div class="pencarian">
+        <input type="text" id="kolomPencarian" placeholder="Cari harta karun..." autofocus>
+        <div class="tombol-pencarian">
+            <button class="tombol-cari" id="cariGoogle">Cari di Google</button>
+            <button class="tombol-cari" id="cariYouTube">Cari di YouTube</button>
+            <button class="tombol-cari" id="cariWiki">Wiki One Piece</button>
         </div>
     </div>
     
-    <div class="quick-links" id="quickLinks"></div>
+    <div class="tautan-cepat" id="tautanCepat"></div>
     
-    <p class="quote" id="quote"></p>
+    <p class="kutipan" id="kutipan"></p>
     
-    <div class="straw-hats" id="strawHats"></div>
+    <div class="kru-topi-jerami" id="kruTopiJerami"></div>
     
-    <footer>~ The One Piece is Real! ~</footer>
+    <footer>~ One Piece itu Nyata! ~</footer>
 
-    <script src="js/clock.js"></script>
-    <script src="js/search.js"></script>
-    <script src="js/themes.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/jam.js"></script>
+    <script src="js/pencarian.js"></script>
+    <script src="js/tema.js"></script>
+    <script src="js/utama.js"></script>
 </body>
 </html>
