@@ -1,318 +1,174 @@
-:root {
-<<<<<<< HEAD
-    --warna-utama: #FFD700;
-    --warna-sekunder: #B22222;
-    --warna-latar: rgba(0, 0, 0, 0.7);
-    --warna-teks: #FFFFFF;
-    --gambar-latar: url('../img/latar-default.jpg');
-}
-
-/* Tema */
-body[data-tema="default"] {
-    --warna-utama: #FFD700;
-    --warna-sekunder: #B22222;
-    --gambar-latar: url('../img/latar-default.jpg');
-}
-
-body[data-tema="topi-jerami"] {
-    --warna-utama: #FF4500;
-    --warna-sekunder: #000080;
-    --gambar-latar: url('../img/latar-topi-jerami.jpg');
-}
-
-body[data-tema="marinir"] {
-    --warna-utama: #FFFFFF;
-    --warna-sekunder: #000080;
-    --gambar-latar: url('../img/latar-marinir.jpg');
-}
-
-body[data-tema="wano"] {
-    --warna-utama: #E6B800;
-    --warna-sekunder: #8B0000;
-    --gambar-latar: url('../img/latar-wano.jpg');
-=======
-    --primary-color: #FFD700;
-    --secondary-color: #B22222;
-    --bg-color: rgba(0, 0, 0, 0.7);
-    --text-color: #FFFFFF;
-    --bg-image: url('https://wallpapercave.com/wp/wp4923981.jpg');
-}
-
-/* Themes */
-body[data-theme="default"] {
-    --primary-color: #FFD700;
-    --secondary-color: #B22222;
-    --bg-color: rgba(0, 0, 0, 0.7);
-    --bg-image: url('https://wallpapercave.com/wp/wp4923981.jpg');
-}
-
-body[data-theme="strawhat"] {
-    --primary-color: #FF4500;
-    --secondary-color: #000080;
-    --bg-color: rgba(0, 0, 50, 0.6);
-    --bg-image: url('https://wallpapercave.com/wp/wp12810534.jpg');
-}
-
-body[data-theme="marine"] {
-    --primary-color: #FFFFFF;
-    --secondary-color: #000080;
-    --bg-color: rgba(0, 0, 80, 0.7);
-    --bg-image: url('https://wallpapercave.com/wp/wp9413176.jpg');
-}
-
-body[data-theme="wano"] {
-    --primary-color: #E6B800;
-    --secondary-color: #8B0000;
-    --bg-color: rgba(0, 0, 0, 0.6);
-    --bg-image: url('https://wallpapercave.com/wp/wp5944759.jpg');
-}
-
-body[data-theme="sunny"] {
-    --primary-color: #FFA500;
-    --secondary-color: #0066CC;
-    --bg-color: rgba(0, 50, 100, 0.6);
-    --bg-image: url('https://wallpapercave.com/wp/wp12055705.jpg');
->>>>>>> 82e78a509ccd816ae6de666a8b5ad209fd777469
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Pirata One', cursive, sans-serif;
-}
-
 body {
-    background: linear-gradient(var(--warna-latar), var(--warna-latar)), 
-                var(--gambar-latar) no-repeat center center fixed;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Pastikan mengambil tinggi penuh viewport */
+    background-image: url('../assets/images/background.jpg'); /* Pastikan path benar */
     background-size: cover;
-    height: 100vh;
-    color: var(--warna-teks);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f0f0f0; /* Warna teks terang */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efek bayangan teks agar lebih terbaca */
+    overflow: hidden; /* Hindari scrollbar jika tidak diperlukan */
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 30px; /* Jarak antar widget */
+    background-color: rgba(0, 0, 0, 0.6); /* Background transparan untuk konten */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 900px; /* Lebar maksimal container */
+    width: 90%; /* Lebar responsif */
+    box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+}
+
+/* Jam */
+.clock-widget h1 {
+    font-family: 'Crete Round', serif;
+    font-size: 5em; /* Ukuran jam yang besar */
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+/* Cuaca */
+.weather-widget {
     text-align: center;
-    overflow: hidden;
-    transition: all 0.5s ease;
-    padding: 20px;
+    font-size: 1.5em;
 }
-
-.logo {
-    width: 300px;
-    margin-bottom: 20px;
-    animation: mengambang 3s ease-in-out infinite;
-    filter: drop-shadow(0 0 10px var(--warna-utama));
-}
-
-@keyframes mengambang {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
-}
-
-<<<<<<< HEAD
-/* ... (lanjutan CSS dengan nama class dalam Bahasa Indonesia) ... */
-=======
-h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px #000;
-    color: var(--primary-color);
-}
-
-.time-container {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: var(--primary-color);
-    text-shadow: 2px 2px 4px #000;
-}
-
-.search-container {
-    width: 80%;
-    max-width: 600px;
-    margin: 15px 0;
-    position: relative;
-}
-
-#search {
-    width: 100%;
-    padding: 15px 20px;
-    border-radius: 50px;
-    border: 2px solid var(--primary-color);
-    font-size: 1.2rem;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    outline: none;
-}
-
-#search:focus {
-    box-shadow: 0 4px 20px var(--primary-color);
-    transform: scale(1.02);
-}
-
-.search-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    justify-content: center;
-}
-
-.search-btn {
-    background: var(--primary-color);
-    color: #000;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.search-btn:hover {
-    background: var(--secondary-color);
-    color: white;
-}
-
-.quick-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
-    max-width: 800px;
-}
-
-.link {
-    background: rgba(255, 215, 0, 0.2);
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-}
-
-.link:hover {
-    background: rgba(255, 215, 0, 0.4);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px var(--primary-color);
-}
-
-.quote {
-    margin: 20px 0;
-    font-style: italic;
-    font-size: 1.2rem;
-    max-width: 600px;
-    color: var(--primary-color);
-    text-shadow: 1px 1px 2px #000;
-    line-height: 1.6;
-}
-
-.straw-hats {
-    display: flex;
-    margin: 20px 0;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.character {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid var(--primary-color);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.character:hover {
-    transform: scale(1.15);
-    box-shadow: 0 0 15px var(--primary-color);
-}
-
-.theme-selector {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 100;
-}
-
-.theme-btn {
-    background: var(--primary-color);
-    color: #000;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.theme-options {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 50px;
-    background: rgba(0,0,0,0.8);
-    border-radius: 10px;
-    padding: 10px;
-    width: 150px;
-}
-
-.theme-option {
-    padding: 8px;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+.weather-widget p {
     margin: 5px 0;
-    text-align: left;
-    transition: all 0.2s ease;
+}
+#temperature {
+    font-weight: bold;
+    font-size: 1.8em;
 }
 
-.theme-option:hover {
-    background: var(--primary-color);
-    color: #000;
-    transform: translateX(5px);
+/* Search Bar */
+.search-bar {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+}
+.search-input {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 1.1em;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+.search-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    background-color: #e44d26; /* Warna merah khas HxH atau tema */
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.search-button:hover {
+    background-color: #c0392b;
 }
 
-footer {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-    text-shadow: 1px 1px 1px #000;
+/* Rekomendasi Komik */
+.manga-recommendations {
+    width: 100%;
+    text-align: center;
+}
+.manga-recommendations h2 {
+    font-family: 'Crete Round', serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.manga-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Agar rekomendasi turun baris jika lebar tidak cukup */
+    gap: 25px;
+}
+.manga-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+    width: 150px; /* Lebar setiap item komik */
+}
+.manga-item:hover {
+    transform: translateY(-5px);
+}
+.manga-item img {
+    width: 100%;
+    height: 200px; /* Tinggi cover yang konsisten */
+    object-fit: cover; /* Pastikan gambar mengisi kotak tanpa terdistorsi */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.manga-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        gap: 20px;
     }
-    
-    .logo {
-        width: 220px;
+    .clock-widget h1 {
+        font-size: 3.5em;
     }
-    
-    .character {
-        width: 50px;
-        height: 50px;
+    .weather-widget {
+        font-size: 1.2em;
     }
-    
-    .time-container {
-        font-size: 1.5rem;
+    .search-input, .search-button {
+        font-size: 1em;
+        padding: 10px 15px;
     }
-    
-    .theme-options {
-        width: 130px;
-        font-size: 0.9rem;
+    .manga-item {
+        width: 120px;
+    }
+    .manga-item img {
+        height: 160px;
     }
 }
->>>>>>> 82e78a509ccd816ae6de666a8b5ad209fd777469
+
+@media (max-width: 480px) {
+    .clock-widget h1 {
+        font-size: 2.5em;
+    }
+    .weather-widget {
+        font-size: 1em;
+    }
+    .search-bar {
+        flex-direction: column; /* Search bar menumpuk di mobile */
+    }
+    .search-input {
+        border-radius: 25px 25px 0 0;
+        text-align: center;
+    }
+    .search-button {
+        border-radius: 0 0 25px 25px;
+        width: 100%;
+    }
+    .manga-list {
+        gap: 15px;
+    }
+    .manga-item {
+        width: 100px;
+    }
+    .manga-item img {
+        height: 140px;
+    }
+}

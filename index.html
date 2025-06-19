@@ -1,157 +1,50 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Piece Tab Baru</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap">
+    <title>Hunter X Hunter New Tab</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<<<<<<< HEAD
-<body data-tema="default">
-    <div class="pemilih-tema">
-        <button class="tombol-tema" id="tombolTema">🎨</button>
-        <div class="opsi-tema" id="opsiTema">
-            <div class="opsi" data-tema="default">🌊 Grand Line</div>
-            <div class="opsi" data-tema="topi-jerami">👒 Kru Topi Jerami</div>
-            <div class="opsi" data-tema="marinir">⚓ Markas Marinir</div>
-            <div class="opsi" data-tema="wano">🗻 Negeri Wano</div>
-=======
-<body data-theme="default">
-    <div class="theme-selector">
-        <button class="theme-btn" id="themeToggle">🎨</button>
-        <div class="theme-options" id="themeOptions">
-            <div class="theme-option" data-theme="default">🌊 Grand Line</div>
-            <div class="theme-option" data-theme="strawhat">👒 Straw Hats</div>
-            <div class="theme-option" data-theme="marine">⚓ Marine HQ</div>
-            <div class="theme-option" data-theme="wano">🗻 Wano Country</div>
-            <div class="theme-option" data-theme="sunny">☀️ Thousand Sunny</div>
->>>>>>> 82e78a509ccd816ae6de666a8b5ad209fd777469
+<body>
+    <div class="container">
+        <div class="clock-widget">
+            <h1 id="clock">00:00:00</h1>
+        </div>
+
+        <div class="weather-widget">
+            <p id="city">Loading weather...</p>
+            <p id="temperature"></p>
+            <p id="description"></p>
+        </div>
+
+        <div class="search-bar">
+            <form action="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" name="q" placeholder="Search Google..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+
+        <div class="manga-recommendations">
+            <h2>Rekomendasi Manga HxH dan Lainnya</h2>
+            <div class="manga-list">
+                <a href="https://readhunterxhunter.net/manga/hunter-x-hunter-chapter-1/" target="_blank" class="manga-item">
+                    <img src="assets/images/hxh-manga-cover.jpg" alt="Hunter X Hunter Manga">
+                    <p>Hunter X Hunter</p>
+                </a>
+                <a href="https://www.viz.com/shonenjump/chapters/my-hero-academia" target="_blank" class="manga-item">
+                    <img src="assets/images/mha-manga-cover.jpg" alt="My Hero Academia Manga">
+                    <p>My Hero Academia</p>
+                </a>
+                <a href="https://www.viz.com/shonenjump/chapters/jujutsu-kaisen" target="_blank" class="manga-item">
+                    <img src="assets/images/jjk-manga-cover.jpg" alt="Jujutsu Kaisen Manga">
+                    <p>Jujutsu Kaisen</p>
+                </a>
+                </div>
         </div>
     </div>
 
-    <img src="img/logo.jpg" alt="Logo One Piece" class="logo">
-    <h1>Menuju Laugh Tale!</h1>
-    
-    <div class="waktu" id="waktu"></div>
-    
-    <div class="pencarian">
-        <input type="text" id="kolomPencarian" placeholder="Cari harta karun..." autofocus>
-        <div class="tombol-pencarian">
-            <button class="tombol-cari" id="cariGoogle">Cari di Google</button>
-            <button class="tombol-cari" id="cariYouTube">Cari di YouTube</button>
-            <button class="tombol-cari" id="cariWiki">Wiki One Piece</button>
-        </div>
-    </div>
-    
-<<<<<<< HEAD
-    <div class="tautan-cepat" id="tautanCepat"></div>
-=======
-    <div class="quick-links">
-        <a href="https://onepiece.fandom.com" class="link" target="_blank">One Piece Wiki</a>
-        <a href="https://www.crunchyroll.com/one-piece" class="link" target="_blank">Tonton One Piece</a>
-        <a href="https://www.viz.com/one-piece" class="link" target="_blank">Baca Manga</a>
-        <a href="https://www.reddit.com/r/OnePiece/" class="link" target="_blank">Komunitas</a>
-        <a href="https://onepiece-merchandise.com" class="link" target="_blank">Merchandise</a>
-    </div>
->>>>>>> 82e78a509ccd816ae6de666a8b5ad209fd777469
-    
-    <p class="kutipan" id="kutipan"></p>
-    
-<<<<<<< HEAD
-    <div class="kru-topi-jerami" id="kruTopiJerami"></div>
-=======
-    <div class="straw-hats">
-        <div class="character" style="background-image: url('https://i.imgur.com/LFFLAR0.jpg')" title="Monkey D. Luffy"></div>
-        <div class="character" style="background-image: url('https://i.imgur.com/ZKDUEF3.jpg')" title="Roronoa Zoro"></div>
-        <div class="character" style="background-image: url('https://i.imgur.com/9YXeZ0m.jpg')" title="Nami"></div>
-        <div class="character" style="background-image: url('https://i.imgur.com/5JQvQ6T.jpg')" title="Usopp"></div>
-        <div class="character" style="background-image: url('https://i.imgur.com/3Vn7Jy3.jpg')" title="Sanji"></div>
-    </div>
->>>>>>> 82e78a509ccd816ae6de666a8b5ad209fd777469
-    
-    <footer>~ One Piece itu Nyata! ~</footer>
-
-<<<<<<< HEAD
-    <script src="js/jam.js"></script>
-    <script src="js/pencarian.js"></script>
-    <script src="js/tema.js"></script>
-    <script src="js/utama.js"></script>
-=======
-    <script>
-        // Clock
-        function updateTime() {
-            const now = new Date();
-            const timeString = now.toLocaleTimeString();
-            document.getElementById('time').textContent = timeString;
-        }
-        setInterval(updateTime, 1000);
-        updateTime();
-
-        // Search
-        document.getElementById('search').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') searchGoogle();
-        });
-        document.getElementById('googleSearch').addEventListener('click', searchGoogle);
-        document.getElementById('youtubeSearch').addEventListener('click', searchYouTube);
-        document.getElementById('wikiSearch').addEventListener('click', searchWiki);
-
-        function searchGoogle() {
-            const query = document.getElementById('search').value.trim();
-            if (query) window.open(`https://www.google.com/search?q=${encodeURIComponent(query + ' one piece')}`, '_blank');
-        }
-        function searchYouTube() {
-            const query = document.getElementById('search').value.trim();
-            if (query) window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query + ' one piece')}`, '_blank');
-        }
-        function searchWiki() {
-            const query = document.getElementById('search').value.trim();
-            if (query) window.open(`https://onepiece.fandom.com/wiki/Special:Search?query=${encodeURIComponent(query)}`, '_blank');
-        }
-
-        // Quotes
-        const quotes = [
-            "Harta karun itu nyata? Kalau kau menginginkannya, aku akan menyerahkan semuanya kepadamu. Carilah! Aku telah meninggalkan semua yang kumiliki di tempat itu! - Gol D. Roger",
-            "Seorang pria tidak akan pernah mati, meskipun dia dibunuh, selama dia ditolak oleh orang lain! - Dr. Hiriluk",
-            "Jika kamu tidak mengambil risiko, kamu tidak bisa menciptakan masa depan! - Monkey D. Luffy",
-            "Ketika dunia mengabaikanmu, itu bukan akhir dari segalanya. - Nico Robin",
-            "Aku tidak takut mati membela impianku! - Portgas D. Ace",
-            "Orang yang tidak bisa melindungi apa pun, tidak bisa melindungi apa pun! - Roronoa Zoro",
-            "Tidak ada di dunia ini yang terjadi dengan sempurna! - Shanks"
-        ];
-        function updateQuote() {
-            document.getElementById('quote').textContent = quotes[Math.floor(Math.random() * quotes.length)];
-        }
-        updateQuote();
-        setInterval(updateQuote, 30000);
-
-        // Themes
-        document.getElementById('themeToggle').addEventListener('click', function() {
-            document.getElementById('themeOptions').style.display = 
-                document.getElementById('themeOptions').style.display === 'block' ? 'none' : 'block';
-        });
-
-        document.querySelectorAll('.theme-option').forEach(option => {
-            option.addEventListener('click', function() {
-                const theme = this.getAttribute('data-theme');
-                document.body.setAttribute('data-theme', theme);
-                localStorage.setItem('onePieceTheme', theme);
-                document.getElementById('themeOptions').style.display = 'none';
-            });
-        });
-
-        // Load saved theme
-        const savedTheme = localStorage.getItem('onePieceTheme');
-        if (savedTheme) document.body.setAttribute('data-theme', savedTheme);
-
-        // Close theme options when clicking outside
-        document.addEventListener('click', function(event) {
-            const themeSelector = document.querySelector('.theme-selector');
-            if (!themeSelector.contains(event.target)) {
-                document.getElementById('themeOptions').style.display = 'none';
-            }
-        });
-    </script>
->>>>>>> 82e78a509ccd816ae6de666a8b5ad209fd777469
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Hunter X Hunter New Tab",
+  "version": "1.0",
+  "description": "New Tab override with Hunter X Hunter theme, Google search, clock, weather, and manga recommendations.",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "geolocation"
+  ],
+  "host_permissions": [
+    "https://api.openweathermap.org/*"
+  ],
+  "icons": {
+    "16": "assets/images/icon.png",
+    "48": "assets/images/icon.png",
+    "128": "assets/images/icon.png"
+  }
+}
