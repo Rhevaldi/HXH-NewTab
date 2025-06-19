@@ -33,3 +33,4 @@ You can easily customize:
 ## License
 
 MIT# Onepiece-newtab
+# OnePiece-NewTab
