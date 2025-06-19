@@ -6,12 +6,17 @@
     <title>One Piece New Tab</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/themes.css">
 </head>
 <body data-theme="default">
     <div class="theme-selector">
         <button class="theme-btn" id="themeToggle">🎨</button>
-        <div class="theme-options" id="themeOptions"></div>
+        <div class="theme-options" id="themeOptions">
+            <div class="theme-option" data-theme="default">🌊 Grand Line</div>
+            <div class="theme-option" data-theme="strawhat">👒 Straw Hats</div>
+            <div class="theme-option" data-theme="marine">⚓ Marine HQ</div>
+            <div class="theme-option" data-theme="wano">🗻 Wano Country</div>
+            <div class="theme-option" data-theme="sunny">☀️ Thousand Sunny</div>
+        </div>
     </div>
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/One_Piece_Logo.svg/1200px-One_Piece_Logo.svg.png" alt="One Piece Logo" class="logo">
@@ -28,17 +33,99 @@
         </div>
     </div>
     
-    <div class="quick-links" id="quickLinks"></div>
+    <div class="quick-links">
+        <a href="https://onepiece.fandom.com" class="link" target="_blank">One Piece Wiki</a>
+        <a href="https://www.crunchyroll.com/one-piece" class="link" target="_blank">Tonton One Piece</a>
+        <a href="https://www.viz.com/one-piece" class="link" target="_blank">Baca Manga</a>
+        <a href="https://www.reddit.com/r/OnePiece/" class="link" target="_blank">Komunitas</a>
+        <a href="https://onepiece-merchandise.com" class="link" target="_blank">Merchandise</a>
+    </div>
     
     <p class="quote" id="quote"></p>
     
-    <div class="straw-hats" id="strawHats"></div>
+    <div class="straw-hats">
+        <div class="character" style="background-image: url('https://i.imgur.com/LFFLAR0.jpg')" title="Monkey D. Luffy"></div>
+        <div class="character" style="background-image: url('https://i.imgur.com/ZKDUEF3.jpg')" title="Roronoa Zoro"></div>
+        <div class="character" style="background-image: url('https://i.imgur.com/9YXeZ0m.jpg')" title="Nami"></div>
+        <div class="character" style="background-image: url('https://i.imgur.com/5JQvQ6T.jpg')" title="Usopp"></div>
+        <div class="character" style="background-image: url('https://i.imgur.com/3Vn7Jy3.jpg')" title="Sanji"></div>
+    </div>
     
     <footer>~ The One Piece is Real! ~</footer>
 
-    <script src="js/clock.js"></script>
-    <script src="js/search.js"></script>
-    <script src="js/themes.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        // Clock
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Search
+        document.getElementById('search').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') searchGoogle();
+        });
+        document.getElementById('googleSearch').addEventListener('click', searchGoogle);
+        document.getElementById('youtubeSearch').addEventListener('click', searchYouTube);
+        document.getElementById('wikiSearch').addEventListener('click', searchWiki);
+
+        function searchGoogle() {
+            const query = document.getElementById('search').value.trim();
+            if (query) window.open(`https://www.google.com/search?q=${encodeURIComponent(query + ' one piece')}`, '_blank');
+        }
+        function searchYouTube() {
+            const query = document.getElementById('search').value.trim();
+            if (query) window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(query + ' one piece')}`, '_blank');
+        }
+        function searchWiki() {
+            const query = document.getElementById('search').value.trim();
+            if (query) window.open(`https://onepiece.fandom.com/wiki/Special:Search?query=${encodeURIComponent(query)}`, '_blank');
+        }
+
+        // Quotes
+        const quotes = [
+            "Harta karun itu nyata? Kalau kau menginginkannya, aku akan menyerahkan semuanya kepadamu. Carilah! Aku telah meninggalkan semua yang kumiliki di tempat itu! - Gol D. Roger",
+            "Seorang pria tidak akan pernah mati, meskipun dia dibunuh, selama dia ditolak oleh orang lain! - Dr. Hiriluk",
+            "Jika kamu tidak mengambil risiko, kamu tidak bisa menciptakan masa depan! - Monkey D. Luffy",
+            "Ketika dunia mengabaikanmu, itu bukan akhir dari segalanya. - Nico Robin",
+            "Aku tidak takut mati membela impianku! - Portgas D. Ace",
+            "Orang yang tidak bisa melindungi apa pun, tidak bisa melindungi apa pun! - Roronoa Zoro",
+            "Tidak ada di dunia ini yang terjadi dengan sempurna! - Shanks"
+        ];
+        function updateQuote() {
+            document.getElementById('quote').textContent = quotes[Math.floor(Math.random() * quotes.length)];
+        }
+        updateQuote();
+        setInterval(updateQuote, 30000);
+
+        // Themes
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            document.getElementById('themeOptions').style.display = 
+                document.getElementById('themeOptions').style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.querySelectorAll('.theme-option').forEach(option => {
+            option.addEventListener('click', function() {
+                const theme = this.getAttribute('data-theme');
+                document.body.setAttribute('data-theme', theme);
+                localStorage.setItem('onePieceTheme', theme);
+                document.getElementById('themeOptions').style.display = 'none';
+            });
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('onePieceTheme');
+        if (savedTheme) document.body.setAttribute('data-theme', savedTheme);
+
+        // Close theme options when clicking outside
+        document.addEventListener('click', function(event) {
+            const themeSelector = document.querySelector('.theme-selector');
+            if (!themeSelector.contains(event.target)) {
+                document.getElementById('themeOptions').style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
