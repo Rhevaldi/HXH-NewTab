@@ -1,0 +1,24 @@
+{
+    "characters": [
+        {
+            "name": "Monkey D. Luffy",
+            "image": "https://i.imgur.com/LFFLAR0.jpg"
+        },
+        {
+            "name": "Roronoa Zoro",
+            "image": "https://i.imgur.com/ZKDUEF3.jpg"
+        },
+        {
+            "name": "Nami",
+            "image": "https://i.imgur.com/9YXeZ0m.jpg"
+        },
+        {
+            "name": "Usopp",
+            "image": "https://i.imgur.com/5JQvQ6T.jpg"
+        },
+        {
+            "name": "Sanji",
+            "image": "https://i.imgur.com/3Vn7Jy3.jpg"
+        }
+    ]
+}
