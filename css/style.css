@@ -52,7 +52,7 @@ body {
 /* Search Bar */
 .search-bar {
     display: flex;
-    width: 100%;
+
     max-width: 500px;
 }
 .search-input {
