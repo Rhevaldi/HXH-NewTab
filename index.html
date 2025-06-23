@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunter X Hunter New Tab</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <div class="clock-widget">
@@ -27,17 +30,20 @@
         </div>
 
 
-        <div class="The Lord of the GPT">
-            <form action="https://chatgpt.com/" method="get" target="_blank">
-                <input type="text" name="q" placeholder="OTW GPT..." class="search-input">
-                <button type="submit" class="search-button">Search</button>
+        <div class="gpt-widget" style="margin: 32px 0;">
+            <form action="https://chatgpt.com/" method="get" target="_blank" style="display: flex; gap: 8px;">
+                <input type="text" name="q" placeholder="Ask anything to GPT..." class="search-input" style="flex: 1;">
+                <button type="submit" class="search-button" style="display: flex; align-items: center; gap: 4px;">
+                    <span style="font-size:1.2em;">🤖</span> GPT
+                </button>
             </form>
         </div>
 
         <div class="manga-recommendations">
             <h2>Rekomendasi Manga HxH dan Lainnya</h2>
             <div class="manga-list">
-                <a href="https://readhunterxhunter.net/manga/hunter-x-hunter-chapter-1/" target="_blank" class="manga-item">
+                <a href="https://readhunterxhunter.net/manga/hunter-x-hunter-chapter-1/" target="_blank"
+                    class="manga-item">
                     <img src="assets/images/HXH-Cover.jpg" alt="Hunter X Hunter Manga">
                     <p>Hunter X Hunter</p>
                 </a>
@@ -49,10 +55,12 @@
                     <img src="assets/images/JJK-cover.jpg" alt="Jujutsu Kaisen Manga">
                     <p>Jujutsu Kaisen</p>
                 </a>
-                </div>
+            </div>
         </div>
     </div>
 
+    <script src="js/jam.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
